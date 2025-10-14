@@ -181,7 +181,10 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="images/teaser.png" alt="empty">
+      <p align="center">
+        <img src="images/teaser.png" alt="empty" width="500">
+      </p>
+      
       <h2 class="subtitle has-text-centered">
       </h2>
       <h2 class="subtitle has-text-centered">
@@ -259,15 +262,11 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Dataset Overview</h2>
-        <p align="center"> 
-            <img src="images/Greenhouse_visual.gif">
-         <img src="images/insta_visual_cut.gif">
-          </p>
         <div class="content has-text-justified">
           <div class="content has-text-justified">
-            <h3><span style="color: black; background: #f2f2f2; padding: 2px 6px; border-radius: 4px; font-weight: 600;">
+            <h2><span style="color: black; background: #f2f2f2; padding: 2px 6px; border-radius: 4px; font-weight: 600;">
     Synthetic Data
-  </span></h3>
+  </span></h2>
             <h4>Greenhouse Setup</h4>
 <table align="center">
   <tr align="center">
@@ -281,32 +280,20 @@
     </td>
   </tr>
 </table>
-            <h4>Canonical Routes</h4>
+<p align="center">
+  <h4>Demo video</h4>
+  <br>
+  <img src="images/Greenhouse_visual.gif">
+</p>
+
+  <h4>Canonical Routes</h4>
 		<p align="center">
-            		<img src="images/Route_Plan.png" width="90%" >
+            		<img src="images/Route_Plan.png" width="90%" ><br>
 		We collected 10 different routes in our simulation environment.
         	</p>  
 	</div>
-<h3> Folder Contents (Synthetic)<h3>
-<p>Our synthetic data follow a per-route structure; each route contains frame-indexed folders for sensors and two time-series logs.
-Our per-frame filenames use **timestamp-based** (e.g., `1753292383498990645`) identifiers shared across modalities.
-- `rgb/`, `depth/`, `seg/`, `imu.csv`, `gps.csv`, as detailed below.
-- `scenes/` holds domain randomization configs (materials, textures, foliage density).
-- `routes/` optional YAMLs describing waypoints used to generate the flights.
 
-```swift
-AgriNav-Sim2Real/data/synthetic/routes/
-├── route01_left/
-│ ├── rgb/                       # 1753292383498990645.png, ...
-│ ├── depth/                     # 1753292383498990645.pfm, ...
-│ ├── semantic_mask/             # 1753292383498990645.png (uint8 class IDs)
-│ ├── lidar/                     # 1753292383498990645.asc (ASCII; x y z [intensity])
-│ ├── imu.csv                    # timestamped IMU
-│ ├── gps.csv                    # timestamped GPS
-├── route02/
-└── route10/
-```</p>
-          <h3><span style="color: black; background: #f2f2f2; padding: 2px 6px; border-radius: 4px; font-weight: 600;">Real Data</span></h3>
+<h2><span style="color: black; background: #f2f2f2; padding: 2px 6px; border-radius: 4px; font-weight: 600;">Real Data</span></h2>
 <h4>Environment Overview</h4>
      <table align="center">
   <tr align="center">
@@ -339,10 +326,13 @@ AgriNav-Sim2Real/data/synthetic/routes/
     </td> 
   </tr>
 </table>
-    <a href="https://cloud-va.insta360.com/share/va/2a8h819p6D9s2U7k1172661248/player?mediaId=288041035899080704"
-                   class="external-link button is-normal is-rounded is-dark">
+<p align="center">
+  <img src="images/insta_visual_cut.gif">
+  <br>
+    <a href="https://cloud-va.insta360.com/share/va/2a8h819p6D9s2U7k1172661248/player?mediaId=288041035899080704">
                   <span>You can view a 360 view of the Farm at here</span>
                 </a>
+</p>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
