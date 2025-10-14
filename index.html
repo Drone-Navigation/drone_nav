@@ -260,31 +260,86 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Dataset Overview</h2>
         <p align="center"> 
-            <img src="images/Greenhouse_visual.gif" width="200" height="200">
-         <img src="images/insta_visual_cut.gif" width="200" height="200">
+            <img src="images/Greenhouse_visual.gif">
+         <img src="images/insta_visual_cut.gif">
           </p>
         <div class="content has-text-justified">
           <div class="content has-text-justified">
             <h3><span style="color: black; background: #f2f2f2; padding: 2px 6px; border-radius: 4px; font-weight: 600;">
     Synthetic Data
   </span></h3>
-            <h4>Environment Overview</h4>
-            <p align="center">
-            <img src="images/Greenhouse_left_closeup.png" width="200" height="200">
-            <img src="images/Greenhouse_setup_front.png" width="200" height="200">
-            <img src="images/Greenhouse_right_closeup.png" width="200" height="200">
-            </p>
+            <h4>Greenhouse Setup</h4>
+<table align="center">
+  <tr align="center">
+    <td align="center">
+      <img src="images/Greenhouse_setup_front.png" width="600"><br>
+      <em>Front view</em>
+    </td>
+    <td align="center">
+      <img src="images/Greenhouse_setup_side.png" width="530"><br>
+      <em>Side view</em>
+    </td>
+  </tr>
+</table>
             <h4>Canonical Routes</h4>
-            <img src="images/Route_Plan.png" width="200" height="200">
-          </div>
+		<p align="center">
+            		<img src="images/Route_Plan.png" width="90%" >
+		We collected 10 different routes in our simulation environment.
+        	</p>  
+	</div>
+<h3> Folder Contents (Synthetic)<h3>
+<p>Our synthetic data follow a per-route structure; each route contains frame-indexed folders for sensors and two time-series logs.
+Our per-frame filenames use **timestamp-based** (e.g., `1753292383498990645`) identifiers shared across modalities.
+- `rgb/`, `depth/`, `seg/`, `imu.csv`, `gps.csv`, as detailed below.
+- `scenes/` holds domain randomization configs (materials, textures, foliage density).
+- `routes/` optional YAMLs describing waypoints used to generate the flights.
+
+```swift
+AgriNav-Sim2Real/data/synthetic/routes/
+├── route01_left/
+│ ├── rgb/                       # 1753292383498990645.png, ...
+│ ├── depth/                     # 1753292383498990645.pfm, ...
+│ ├── semantic_mask/             # 1753292383498990645.png (uint8 class IDs)
+│ ├── lidar/                     # 1753292383498990645.asc (ASCII; x y z [intensity])
+│ ├── imu.csv                    # timestamped IMU
+│ ├── gps.csv                    # timestamped GPS
+├── route02/
+└── route10/
+```</p>
           <h3><span style="color: black; background: #f2f2f2; padding: 2px 6px; border-radius: 4px; font-weight: 600;">Real Data</span></h3>
-          <h4>Environment Overview</h4>
-            <p align="center">
-            <img src="images/Farm_Left.png" width="200" height="200">
-            <img src="images/Farm_Middle.png" width="200" height="200">
-            <img src="images/Farm_Right.png" width="200" height="200">
-            </p>
-           <a href="https://cloud-va.insta360.com/share/va/2a8h819p6D9s2U7k1172661248/player?mediaId=288041035899080704"
+<h4>Environment Overview</h4>
+     <table align="center">
+  <tr align="center">
+    <td align="center"><br>
+      <img alt="Farm overview (left)" src="images/Farm_Left.jpg" width="480"/><br>
+      <em>Farm overview (left)</em>
+    </td>
+    <td aligh="center"><br>
+      <img alt="Farm overview (center)" src="images/Farm_Middle.jpg" width="480"/><br>
+      <em>Farm overview (center)</em>
+    </td>
+    <td aligh="center"><br>
+      <img alt="Farm overview (right)" src="images/Farm_Right.jpg" width="480"/><br>
+      <em>Farm overview (right)</em>
+    </td>
+  </tr>
+  <tr>
+    <br><br>
+    <td aligh="center"><br>
+    <img alt="Crop overview (strawberries)" src="images/farm_strawberries.jpg" width="480"/><br>
+    <em>Crop overview (strawberries)</em>
+    </td>
+    <td aligh="center"><br>
+    <img alt="Crop overview (blueberries)" src="images/farm_blueberries.jpg" width="480"/><br>
+    <em>Crop overview (blueberries)</em>
+    </td>
+    <td aligh="center"><br>
+    <img alt="Crop overview (blackberries)" src="images/farm_blackberries.jpg" width="480"/><br>
+    <em>Crop overview (blackberries)</em>
+    </td> 
+  </tr>
+</table>
+    <a href="https://cloud-va.insta360.com/share/va/2a8h819p6D9s2U7k1172661248/player?mediaId=288041035899080704"
                    class="external-link button is-normal is-rounded is-dark">
                   <span>You can view a 360 view of the Farm at here</span>
                 </a>
