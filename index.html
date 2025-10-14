@@ -100,6 +100,12 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    .section {
+      padding: 3rem 1.5rem; /* Default is 3rem 1.5rem, reduce to 2rem or 1.5rem */
+    }
+    .section:not(:last-of-type) {
+      padding-bottom: 2rem;
+    }
   </style>
 </head>
 <body>
@@ -127,7 +133,7 @@
               <a href="https://github.com/llamallamapresident">Russel Luo</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://github.com/structuresComp">M. Khalid Jawed</a><sup>1</sup>,
+              <a href="https://github.com/structuresComp">M. Khalid Jawed</a><sup>1</sup>
             </span>
           </div>
 
@@ -368,59 +374,6 @@
   </div>
 </section>
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <div class="content">
-          <h2 class="title is-3">Citation</h2>
-          <pre><code>@inproceedings{zhu2025drone,
-title={fill title here},
-author={fill author list here},
-booktitle={xxx},
-year={2025}
-}</code></pre>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="license">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-
-        <h2 class="title is-3">License</h2>
-          <p>
-            Our <strong>AgriNav-Sim2Real</strong> dataset is made available for <strong>non-commercial purposes only</strong>.
-          </p>
-          <p>
-            You will not, directly or indirectly, reproduce, use, or convey the dataset or any content, or any work product or data derived therefrom, for commercial purposes.
-          </p>
-          <p>
-            This code is for <strong>academic communication only</strong> and not for commercial purposes. If you wish to use it for commercial applications, please contact the authors.
-          </p>
-
-          <p>
-            Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-          </p>
-          <ul style="margin-left: 1.5rem; text-align: left;">
-            <li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
-            <li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
-          </ul>
-
-          <p style="font-size: 0.95em; color: #555; margin-top: 1rem;">
-            THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-            IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-            HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-          </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <section class="section" id="acknowledgements">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
@@ -436,6 +389,56 @@ year={2025}
   </div>
 </section>
 
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content">
+          <h2 class="title is-3">Citation</h2>
+          <pre><code>@inproceedings{zhu2025drone,
+title={AgriNav-Sim2Real: A Multi-Sensor Dataset for Drone/UGV Navigation in Greenhouses (Synthetic + Real)},
+author={Evelyn Zhu, Tuan-Anh Vu, Akshat Pandya, Russel Luo, M. Khalid Jawed},
+booktitle={xxx},
+year={2025}
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="license">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content">
+          <h2 class="title is-3">License</h2>
+          <p>
+            Our <strong>AgriNav-Sim2Real</strong> dataset is made available for <strong>non-commercial purposes only</strong>.
+          </p>
+          <ul>
+            <li>You will not, directly or indirectly, reproduce, use, or convey the dataset or any content, or any work product or data derived therefrom, for commercial purposes.</li>
+            <li>This code is for <strong>academic communication only</strong> and not for commercial purposes. If you wish to use it for commercial applications, please contact the authors.</li>
+          </ul>
+
+          <p>
+            Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+          </p>
+          <ul>
+            <li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
+            <li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
+          </ul>
+
+          <p style="font-size: 0.95em; color: #555; margin-top: 1rem;">
+            THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+            IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+            HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
