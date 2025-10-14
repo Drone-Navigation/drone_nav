@@ -134,7 +134,7 @@
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>University of California, Los Angeles</span>
             <span class="author-block"><sup>2</sup>The Hong Kong University of Science and Technology</span>
-            <span class="author-block"><sup>2</sup>Cruise</span>
+            <span class="author-block"><sup>3</sup>Cruise</span>
           </div>
           <div class="is-size-6 publication-authors">
 <!--             <span class="author-block"><sup>*</sup>Equal contribution</span> -->
@@ -331,11 +331,53 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+
+        <h2 class="title is-3">Benchmark</h2>
+
+        <div class="highlight-box">
+          <p style="text-align: justify;">
+            We evaluated the <strong>AgriNav-Sim2Real</strong> dataset using several recent deep-learning frameworks for
+            <strong>object detection</strong> and <strong>semantic segmentation</strong>.
+            Our benchmark focuses on assessing cross-modal generalization between synthetic and real data splits.
+            The evaluation includes representative architectures such as <em>YOLOv8</em>, <em>Mask R-CNN</em>,
+            and <em>SegFormer</em>, with metrics reported in mAP, IoU, and F1-score across greenhouse environments.
+          </p>
+
+          <p style="text-align: justify;">
+            These baselines serve as references for sim-to-real performance and highlight the challenges
+            of domain adaptation under multi-sensor inputs (RGB, Depth, and NIR).
+          </p>
+
+          <div style="
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            padding: 10px 16px;
+            margin-top: 1.5rem;
+            font-weight: 600;
+            color: #555;">
+            <span style="font-size: 1.2em; margin-right: 8px;">⚙️</span>
+            <span>Ongoing Work — To Be Updated</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
+    <h2 class="title">Citation</h2>
     <pre><code>@inproceedings{zhu2025drone,
 title={fill title here},
 author={fill author list here},
@@ -346,25 +388,64 @@ year={2025}
   </div>
 </section>
 
+<section class="section" id="license">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
 
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+        <h2 class="title is-3">5. License</h2>
+
+        <div class="highlight-box" style="text-align: left;">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            Our <strong>AgriNav-Sim2Real</strong> dataset is made available for <strong>non-commercial purposes only</strong>.
           </p>
           <p>
-            Thanks for the project template by <a href="https://github.com/nerfies/nerfies.github.io"> Nerfies Project</a>. 
+            You will not, directly or indirectly, reproduce, use, or convey the dataset or any content, or any work product or data derived therefrom, for commercial purposes.
+          </p>
+          <p>
+            This code is for <strong>academic communication only</strong> and not for commercial purposes. If you wish to use it for commercial applications, please contact the authors.
+          </p>
+
+          <p>
+            Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+          </p>
+          <ul style="margin-left: 1.5rem; text-align: left;">
+            <li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
+            <li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
+          </ul>
+
+          <p style="font-size: 0.95em; color: #555; margin-top: 1rem;">
+            THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+            IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+            HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           </p>
         </div>
+
       </div>
     </div>
   </div>
-</footer>
+</section>
+
+
+<section class="section" id="acknowledgements">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+
+        <h2 class="title is-3">6. Acknowledgements</h2>
+
+        <div class="highlight-box" style="text-align: left;">
+          <p>
+            This project was funded by the <strong>Department of Pesticide Regulation</strong>.  
+            The contents may not necessarily reflect the official views or policies of the State of California.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 
 </body>
 </html>
