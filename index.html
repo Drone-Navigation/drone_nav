@@ -127,7 +127,7 @@
               <a href="https://github.com/tuananh1007">Tuan-Anh Vu</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="/">Akshat Pandya</a><sup>2</sup>,
+              <a href="https://sites.google.com/view/akshatpandya">Akshat Pandya</a><sup>2</sup>,
             </span>
             <span class="author-block">
               <a href="https://github.com/llamallamapresident">Russell Luo</a><sup>1</sup>,
@@ -222,26 +222,47 @@
         <div class="content has-text-justified">
           <div class="abstract-container">
             <p>
-              We introduce AgriNav-Sim2Real, a dataset for <strong>greenhouse navigation</strong> that combines synthetic (Unreal Engine + AirSim) and real (handheld/UGV/drone) captures. The synthetic split provides RGB, Depth, Semantic Segmentation, LiDAR, IMU, and GPS/pose in a 3×5 connected-greenhouse with 10 canonical routes (loop, straight, zig-zag, in/out). The real split offers ZED2i RGB-D, Alvium NIR, and IMU across multiple farm sessions, with optional Insta360 360° context. Data are organized with timestamp-based filenames shared across modalities for straightforward synchronization and a consistent folder layout for loaders and baselines. <strong>We target tasks in navigation/obstacle avoidance, depth estimation, semantic segmentation, cross-modal fusion (RGB-D/NIR), and sim-to-real transfer (train synthetic → evaluate real)</strong>.
+              We introduce <strong>AgriNav-Sim2Real</strong>, a large-scale dataset for <strong>greenhouse navigation</strong> that bridges synthetic (Unreal Engine + AirSim) and real (handheld/UGV/drone) captures.
+              The <strong>synthetic split</strong> provides RGB, Depth, Semantic Segmentation, LiDAR, IMU, and GPS/pose data in a 3×5 connected-greenhouse with 10 canonical routes (loop, straight, zig-zag, in/out), rendered at a resolution of <strong>960×540 px</strong>.
+              The <strong>real split</strong> offers ZED2i RGB-D, Alvium NIR, and IMU recordings across multiple farm sessions, with optional Insta360 360° context, captured at <strong>3840×2160 px</strong> resolution.
+            </p>
+            <p>
+              In total, the dataset contains <strong>847,243 files</strong> (<strong>15 videos, 674.3 GB</strong>), organized with timestamp-based filenames shared across modalities for straightforward synchronization and consistent folder layout for loaders and baselines.
             </p>
 
-            <div class="highlight-box">
-              <p style="font-weight: bold; color: #333; font-size: 1.2em; margin: 0;">
-                <p>
-                  <span style="font-size:24px; font-weight:bold;">Dataset Highlights:</span>
-                </p>
-              <p>
-                <strong>Modalities (Synthetic):</strong> RGB, Depth (PFM), Semantic Segmentation (uint8 masks), LiDAR (ASCII), IMU, GPS/pose. <br>
+            <p>
+              We also establish a <strong>benchmark suite</strong> evaluating recent methods in <strong>object detection</strong> and <strong>semantic segmentation</strong> (e.g., <em>YOLOv8</em>, <em>Mask R-CNN</em>, <em>SegFormer</em>) to assess sim-to-real generalization across multi-sensor inputs (RGB, Depth, NIR).
+            </p>
 
-<strong>Modalities (Real):</strong> ZED2i RGB-D + IMU; Alvium 1800 U-501 NIR; (FLIR Lepton LWIR capable but not in this release); Insta360 X3 for 360° context.<br>
+            <p>
+              <strong>AgriNav-Sim2Real</strong> targets tasks in <strong>navigation and obstacle avoidance</strong>, <strong>depth estimation</strong>, <strong>semantic segmentation</strong>, <strong>cross-modal fusion (RGB-D/NIR)</strong>, and <strong>sim-to-real transfer</strong> (train synthetic → evaluate real).
+            </p>
 
-<strong>Environment:</strong> 3×5 connected greenhouses with dynamic lights, wind, clutter, and 10 route classes (Route #1…#10).<br>
 
-<strong>Organization:</strong> Per-route/per-session trees; timestamp-based filenames shared across modalities; optional scenes/ (domain randomization), routes/ (waypoints).<br>
-<strong>Use cases:</strong> Navigation & obstacle avoidance; depth & segmentation; RGB↔NIR fusion; domain adaptation & transfer.<br>
-              </p>
-              </p>
-            </div>
+            <!-- Dataset Highlights (split into two blocks) -->
+<div class="highlight-box">
+  <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+    <i class="fas fa-vials" style="font-size:20px; color:#555;"></i>
+    <span style="font-size:18px; font-weight:700;">Dataset Highlights — Synthetic</span>
+  </div>
+  <p style="margin:0;">
+    <strong>Modalities (Synthetic):</strong>
+    RGB, Depth (PFM), Semantic Segmentation (uint8 masks), LiDAR (ASCII), IMU, GPS/pose.
+  </p>
+</div>
+
+<div class="highlight-box" style="margin-top:14px;">
+  <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+    <i class="fas fa-seedling" style="font-size:20px; color:#555;"></i>
+    <span style="font-size:18px; font-weight:700;">Dataset Highlights — Real</span>
+  </div>
+  <p style="margin:0;">
+    <strong>Modalities (Real):</strong>
+    ZED2i RGB-D + IMU; Alvium 1800 U-501 NIR; (FLIR Lepton LWIR capable but not in this release);
+    Insta360 X3 for 360° context.
+  </p>
+</div>
+
               </div>
               </p>
             </div>
