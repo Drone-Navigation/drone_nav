@@ -237,31 +237,55 @@
             <p>
               <strong>AgriNav-Sim2Real</strong> targets tasks in <strong>navigation and obstacle avoidance</strong>, <strong>depth estimation</strong>, <strong>semantic segmentation</strong>, <strong>cross-modal fusion (RGB-D/NIR)</strong>, and <strong>sim-to-real transfer</strong> (train synthetic → evaluate real).
             </p>
+            <!-- Dataset Highlights (split into Synthetic and Real) -->
+            <h2 class="title is-3 has-text-centered" style="margin-top: 2rem;">Dataset Highlights</h2>
 
+            <!-- Synthetic Block -->
+            <div class="highlight-box" style="margin-bottom: 1rem;">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                <i class="fas fa-robot" style="font-size:20px; color:#555;"></i>
+                <span style="font-size:18px; font-weight:700;">Synthetic Split</span>
+              </div>
+              <p style="margin:0.5rem 0;">
+                <strong>Modalities:</strong> RGB, Depth (PFM), Semantic Segmentation (uint8 masks), LiDAR (ASCII), IMU, GPS/pose.
+              </p>
+              <p style="margin:0.5rem 0;">
+                <strong>Environment:</strong> 3×5 connected greenhouses with dynamic lighting, wind, clutter, and 10 route classes
+                (Route #1–#10) rendered via Unreal Engine + AirSim.
+              </p>
+              <p style="margin:0.5rem 0;">
+                <strong>Organization:</strong> Per-route folder structure with timestamp-based filenames shared across modalities;
+                optional <code>scenes/</code> (for domain randomization) and <code>routes/</code> (for waypoints).
+              </p>
+              <p style="margin:0.5rem 0;">
+                <strong>Use Cases:</strong> Synthetic data pretraining, sensor fusion benchmarking, 3D reconstruction,
+                and sim-to-real transfer learning.
+              </p>
+            </div>
 
-            <!-- Dataset Highlights (split into two blocks) -->
-<div class="highlight-box">
-  <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
-    <i class="fas fa-robot" style="font-size:20px; color:#555;"></i>
-    <span style="font-size:18px; font-weight:700;">Dataset Highlights — Synthetic</span>
-  </div>
-  <p style="margin:0;">
-    <strong>Modalities (Synthetic):</strong>
-    RGB, Depth (PFM), Semantic Segmentation (uint8 masks), LiDAR (ASCII), IMU, GPS/pose.
-  </p>
-</div>
-
-<div class="highlight-box" style="margin-top:14px;">
-  <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
-    <i class="fas fa-seedling" style="font-size:20px; color:#555;"></i>
-    <span style="font-size:18px; font-weight:700;">Dataset Highlights — Real</span>
-  </div>
-  <p style="margin:0;">
-    <strong>Modalities (Real):</strong>
-    ZED2i RGB-D + IMU; Alvium 1800 U-501 NIR; (FLIR Lepton LWIR capable but not in this release);
-    Insta360 X3 for 360° context.
-  </p>
-</div>
+            <!-- Real Block -->
+            <div class="highlight-box">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                <i class="fas fa-leaf" style="font-size:20px; color:#555;"></i>
+                <span style="font-size:18px; font-weight:700;">Real Split</span>
+              </div>
+              <p style="margin:0.5rem 0;">
+                <strong>Modalities:</strong> ZED2i RGB-D + IMU; Alvium 1800 U-501 NIR; (FLIR Lepton LWIR capable but not in this release);
+                Insta360 X3 for 360° context.
+              </p>
+              <p style="margin:0.5rem 0;">
+                <strong>Environment:</strong> Field recordings from commercial greenhouses and open-farm setups under varying lighting,
+                weather, and plant species (strawberries, blueberries, blackberries).
+              </p>
+              <p style="margin:0.5rem 0;">
+                <strong>Organization:</strong> Per-session folders organized by timestamp and sensor type (e.g., <code>zed2i/</code>, <code>nir/</code>, <code>imu/</code>),
+                synchronized for multimodal processing.
+              </p>
+              <p style="margin:0.5rem 0;">
+                <strong>Use Cases:</strong> Real-world validation of trained navigation policies, depth estimation, and
+                cross-modal RGB↔NIR domain adaptation.
+              </p>
+            </div>
 
               </div>
               </p>
